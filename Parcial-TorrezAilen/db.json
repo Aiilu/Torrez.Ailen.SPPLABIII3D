@@ -1,0 +1,70 @@
+{
+  "anuncios": [
+    {
+      "id": 2,
+      "titulo": "Wendy",
+      "transaccion": "Venta",
+      "descripcion": "Pierde mucho pelo",
+      "precio": "2500",
+      "tipo": "Perro",
+      "raza": "Mestiza",
+      "fecha": "2019-03-01",
+      "vacuna": "Si"
+    },
+    {
+      "id": 3,
+      "titulo": "Lola",
+      "transaccion": "Venta",
+      "descripcion": "Muy mimosa",
+      "precio": "5000",
+      "tipo": "Perro",
+      "raza": "Caniche",
+      "fecha": "2020-07-01",
+      "vacuna": "Si"
+    },
+    {
+      "id": 4,
+      "titulo": "Junior",
+      "transaccion": "Venta",
+      "descripcion": "Es un poco bruto",
+      "precio": "7500",
+      "tipo": "Perro",
+      "raza": "Pitbull",
+      "fecha": "2017-06-20",
+      "vacuna": "No"
+    },
+    {
+      "id": 5,
+      "titulo": "Dalila",
+      "transaccion": "Venta",
+      "descripcion": "Gorda",
+      "precio": "3000",
+      "tipo": "Gato",
+      "raza": "Siames",
+      "fecha": "2015-01-25",
+      "vacuna": "Si"
+    },
+    {
+      "id": 6,
+      "titulo": "Maite",
+      "transaccion": "Venta",
+      "descripcion": "Se escapa",
+      "precio": "1500",
+      "tipo": "Gato",
+      "raza": "Van Turco",
+      "fecha": "2021-02-25",
+      "vacuna": "No"
+    },
+    {
+      "id": 7,
+      "titulo": "Dando de alta",
+      "transaccion": "Venta",
+      "descripcion": "Modifique bien",
+      "precio": "123",
+      "tipo": "Perro",
+      "raza": "Mestizo",
+      "fecha": "2021-06-03",
+      "vacuna": "Si"
+    }
+  ]
+}

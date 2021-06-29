@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Traigo el css -->
+    <link rel="stylesheet" href="./css/estilos.css">
+
+     <!-- Traigo boostrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+    <!-- Traigo el script -->
+    <script src="./js/scripts.js" type="module"></script>
+    <!-- Para que no tire el error de favicon -->
+    <link rel="icon" href="./assets/favicon.ico" type="image/x-icon">
+    <!-- Para poner el ICON -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"/>
+    <!-- Para traer AXIOS -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    
+    <title>Primer Parcial</title>
+</head>
+<body>
+        <header>
+           <img class="imagLogo" src="./assets/logo.png" alt="foto logo">
+           <nav>
+               <ul class="list-unstyled list-inline p-5">
+                   <li class="list-inline-item"><a class="text-white" style="text-decoration: none;" href="#">Nosotros</a></li>
+                   <li class="list-inline-item"><a class="text-white" style="text-decoration: none;" href="#">Anuncios</a></li>
+                   <li class="list-inline-item"><a class="text-white" style="text-decoration: none;" href="#">Blog</a></li>
+                   <li class="list-inline-item"><a class="text-white" style="text-decoration: none;" href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Administracion</h1>
+        <div class="container-fluid">
+            <img class="imagTitulo" src="./assets/titulo.jpg" alt="foto titulo">
+            </div>
+        <br>
+        <div class="row justify-content-center">
+            <form class="col-sm-12 col-lg-8 col-xl-6">
+                <fieldset class="border border-dark border-1 rounded-3 p-2">
+                    <legend>Información del Anuncio</legend>
+                    <div>
+                        <div class="form-group">
+                             <label for="txtTitulo">Titulo:</label>
+                             <br>
+                             <input type="text" name="tituloF" id="txtTitulo" placeholder="Titulo" class="form-control bg-light" required>
+                        </div>
+                    </div>
+
+                    <input type="hidden" name="transH" id="idTrans" value="Venta">
+                    <br>
+
+                   <div>
+                        <div class="form-group">
+                            <label for="txtDescripcion">Descripcion:</label>
+                            <br>
+                            <input type="text" name="descripcionF" id="txtDescripcion" placeholder="Descripcion" class="form-control bg-light" required>
+                        </div>
+                    </div>
+    
+                   <br>
+                    <label for="optAnimal">Animal:</label>
+                    <div>
+                        <input class="form-check-input" type="radio" name="tipoF" id="optAnimal" value="Perro" required> Perro
+                    </div>
+                    <div>
+                        <input class="form-check-input" type="radio" name="tipoF" id="optAnimal" value="Gato"> Gato
+                    </div>
+
+                    <br>
+                    <div class="form-group">   
+                       <label for="numPrecio">Precio:</label>
+                   <br>
+                   <input type="number" name="precioF" id="numPrecio" placeholder="Precio" min="1" class="form-control bg-light" required>
+                   </div>
+                   <br>
+    
+                   <br>
+                   <div class="row">
+
+                   <div class="col-sm row">
+                    <div class="col-2">
+                        <img src="./assets/raza.png" alt="foto puerta" style="width: 30px; height: 22px;">
+                    </div>
+
+                    <div class="col-10">
+                        <input type="text" name="razaF" id="txtRaza" placeholder="Raza" class="bg-light" required>                        
+                    </div>   
+                   </div>
+
+                   <div class="col-sm row">
+                   <div class="col-2">
+                    <img src="./assets/fechaV.png" alt="foto puerta" style="width: 30px; height: 22px;">
+                    </div>
+                    <div class="col-10">  
+                    <input type="date" name="fechaF" id="fechaVacuna" placeholder="dd/mm/aaaa" class="bg-light" required>
+                   </div>
+                   </div>
+
+                   <div class="col-sm row">
+                    <div class="col-2">
+                    <img src="./assets/vacunaF.png" alt="foto puerta" style="width: 30px; height: 22px;">
+                    </div>
+                    <div class="col-10"> 
+                    <label for="listVacuna"></label>
+                    <select name="vacunaA" id="vacunaF" class="bg-light" required>
+                    <option selected="true" disabled="disabled" value="" >---Elegir---</option>
+                    <option value="Si">Si</option>
+                    <option value="No">No</option>
+                    </select>
+                    </div>
+                   </div>
+                   </div>
+                   <br>
+                </fieldset>
+                <br>
+                <button class="btn btn-success" type="submit" name="submitF" id="submitAlta">
+                    <i class="fa fa-floppy-o" aria-hidden="true" style="color: black;"></i>
+                    Guardar
+                </button>
+                <br>
+                <br>
+                <input class="oculto btn btn-primary" type="button" name="btnMF" id="btnGuardar" value="Modificar">
+                <input class="oculto btn btn-danger" type="button" name="btnEF" id="btnEliminar" value="Eliminar">
+                <input class="oculto btn btn-secondary" type="button" name="btnCF" id="btnCancelar" value="Cancelar">
+            </form>
+        </div>
+        <div class="row justify-content-center p-5">
+            <div class="col-sm-12 col-lg-8 col-xl-6">
+                <div class="row justify-content-between bg-secondary border border-dark border-1 rounded-3 p-3"> 
+                <div class="col-sm-6 p-2">
+                <div id="filtro">
+                    <label for="listFiltrar">Filtrar Por Animal:</label>
+                    <br>
+                    <select class="form-select" name="filtrarF" id="filtrarFF" required>
+                    <option selected="true" disabled="disabled" value="T" >---Elegir---</option>
+                    <option value="T">Todos</option>
+                    <option value="G">Gato</option>
+                    <option value="P">Perro</option>
+                    </select>
+                </div>
+                </div>
+                <div class="col-sm-5 p-2">
+                    <label>Promedio de Precios</label>
+                    <input name="promInp" id="promedio" type="number" disabled>
+                </div>
+            </div>
+            <br>
+            <h3 class="small-1 text-center">Tildar los campos a mostrar</h3>
+            <input type="checkbox" name="idCheck" value="id" id="cboxid" class="oculto" checked><br>
+                <div id="columnas">
+                    <div class="row p-2">
+                        <div class="col-sm">
+                            <input type="checkbox" name="tituloCheck" value="Tit" id="cboxtitulo" checked>
+                            <label for="cboxtitulo" class="form-check-label">Titulo</label>
+                        </div>
+                        <div class="col-sm">
+                            <input type="checkbox" name="tranCheck" value="Tran" id="cboxtransaccion" checked>
+                            <label for="cboxtransaccion" class="form-check-label">Transaccion</label>
+                        </div>
+                        <div class="col-sm">
+                            <input type="checkbox" name="descripCheck" value="Des" id="cboxdescripcion" checked>
+                            <label for="cboxdescripcion" class="form-check-label">Descripcion</label>
+                        </div>
+                        <div class="col-sm">
+                            <input type="checkbox" name="precioCheck" value="Prec" id="cboxprecio" checked>
+                            <label for="cboxprecio" class="form-check-label">Precio</label>
+                        </div>
+                   </div>
+                   
+                    <div class="row p-2">
+                        <div class="col-sm">
+                            <input type="checkbox" name="tipoCheck" value="Tipo" id="cboxtipo" checked>
+                            <label for="cboxtipo" class="form-check-label">Tipo</label>
+                        </div>
+                        <div class="col-sm">
+                            <input type="checkbox" name="razaCheck" value="Raza" id="cboxraza" checked>
+                            <label for="cboxraza" class="form-check-label">Raza</label>
+                        </div>
+                        <div class="col-sm">
+                            <input type="checkbox" name="fechaCheck" value="Fecha" id="cboxfecha" checked>
+                            <label for="cboxfecha" class="form-check-label">Fecha</label>
+                        </div>
+                        <div class="col-sm">
+                            <input type="checkbox" name="vacunaCheck" value="Vacuna" id="cboxvacuna" checked>
+                            <label for="cboxvacuna" class="form-check-label">Vacuna</label>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" id="btnAplicar" class="btn btn-warning m-3">Aplicar Filtros</button>
+            </div>
+        </div>
+        <div class="row justify-content-center"> 
+            <div class="col-2" id="spinnerF"></div>
+        </div>
+        <div class="row justify-content-center table-responsive-sm"> 
+            <div class="col-lg-10 col-xl-8 oculto2" id="tablaF"></div>
+        </div>
+        <br>
+    </main>
+
+    <footer>
+        <nav>
+            <ul class="list-unstyled list-inline p-5">
+               <li class="list-inline-item"><a class="text-white" style="text-decoration: none;" href="#">Nosotros</a></li>
+               <li class="list-inline-item"><a class="text-white" style="text-decoration: none;" href="#">Anuncios</a></li> 
+               <li class="list-inline-item"><a class="text-white" style="text-decoration: none;" href="#">Blog</a></li>
+               <li class="list-inline-item"><a class="text-white" style="text-decoration: none;" href="#">Contacto</a></li>
+           </ul>
+        </nav>
+        <p>Todos los derechos reservados 2019 &copy;</p>
+    </footer>
+</body>
+</html>

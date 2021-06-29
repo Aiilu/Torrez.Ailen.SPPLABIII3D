@@ -1,0 +1,233 @@
+/* table
+{
+    border-collapse: collapse;
+}
+
+table, th, td
+{
+    border: 1px solid black;
+} */
+
+ul>li
+{
+    /* list-style-type: none; */
+    /* list-style: none; */
+    /* padding: 10px; */
+    align-items: center;
+}
+
+/* ul>li>a
+{
+    color: white;
+} */
+
+ul
+{
+    display: flex;
+}
+
+.oculto
+{
+    visibility: hidden;
+}
+
+.oculto2
+{
+    opacity: 0;
+}
+
+.imagLogo
+{
+    width: 10vw;
+}
+
+header
+{
+    display: flex;
+    justify-content: space-between;
+    background-color: orange;
+    padding: 15px;
+}
+
+h1
+{
+    text-transform: capitalize;
+    font-weight: lighter;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+.imagTitulo
+{
+    width: 100%;
+    height: 40vh;
+}
+
+legend
+{
+    text-transform: capitalize;
+}
+
+label
+{
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* #submitAlta
+{
+    border-radius: 5px;
+    background-color: rgb(53, 53, 206);
+    padding: 10px;
+    font-weight: bold;
+    color: white;
+} */
+
+/* input[type *="button"]
+{
+    border-radius: 5px;
+    padding: 5px;
+    margin: 0 5px 5px 5px;
+    font-weight: bold;
+} */
+
+/* #btnGuardar
+{
+    background-color: rgb(119, 201, 64);
+}
+
+#btnEliminar
+{
+    background-color: rgb(248, 90, 62);
+}
+
+#btnCancelar
+{
+    background-color: rgb(107, 158, 156);
+} */
+
+/* thead>tr:first-child
+{
+    background-color: rgb(53, 53, 206);
+    text-transform: uppercase;
+} */
+
+/* form
+{
+    width: 50%;
+} */
+
+/* .alinearIconos
+{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+} */
+
+/* .alinearIconosInd
+{
+    display: flex;
+} */
+
+/* .alinear
+{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+} */
+
+/* #txtTitulo, #txtDescripcion, #numPrecio, #txtRaza, #fechaVacuna, #vacunaF
+{
+    background-color: lightgray;
+    border-radius: 5px;
+    width: 90%;
+} */
+
+/* tbody>tr:hover {
+    cursor: pointer;
+    background-color: rgb(60, 194, 93);
+    color: #FFF;
+} */
+
+footer
+{
+    display: flex;
+    justify-content: space-between; 
+    background-color:orange;
+    align-items: center;
+}
+
+@media(max-width:425px)
+{
+   #tablaF
+    {
+        font-size: 10px;
+    }
+   /* .alinearIconos
+   {
+       flex-direction: column;
+   } */
+
+   #btnGuardar, #btnCancelar, #btnEliminar
+   {
+       display: flex;
+       justify-content: space-between;
+   }
+
+   header
+    {
+        flex-direction: column;   
+        align-items: center;
+    } 
+
+    .imagLogo
+    {
+      width: 25vw;
+    }
+
+    ul
+    {
+        flex-direction: column;
+    }
+}
+
+@media(max-width:375px)
+{
+    header
+    {
+        flex-direction: column;   
+    } 
+
+    .imagLogo
+    {
+        display: none;
+    }
+ 
+   p
+   {
+       display: none;
+   }
+
+    .imagTitulo
+    {
+        display: none;
+    }
+
+    #tablaF
+    {
+        font-size: 9px;
+    }
+}
+
+@media(max-width:320px)
+{
+    #tablaF
+    {
+        font-size: 6px;
+    }
+
+    footer
+    {
+        display: none;
+    }
+}
